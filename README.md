@@ -1,33 +1,51 @@
-# Getting Started with the Every.io engineering challenge.
+## Prerequisites
 
-Thanks for taking the time to complete the Every.io code challenge. Don't worry, it's not too hard, and please do not spend more than an hour or two. We know you have lots of these to do, and it can be very time consuming.
+Before you begin, ensure you have the following installed on your machine:
 
-## The biggest factor will be your code:
+- [Node.js](https://nodejs.org/): Ensure that Node.js, preferably version 16 or higher, is installed on your system, as this project utilizes the latest versions of TypeScript and Nodemon.
+- [npm](https://www.npmjs.com/): npm is the package manager for Node.js and comes with the Node.js installation.
 
-1. How readable, is your code.
-2. Scalability.
-3. Are there any bugs.
+## Installation
 
-## Requirements
+Install the project dependencies including TypeScript and Nodemon:
 
-You will be creating an API for a task application.
+```
+npm i
+```
 
-1. This application will have tasks with four different states:
-   - To do
-   - In Progress
-   - Done
-   - Archived
-2. Each task should contain: Title, Description, and what the current status is.
-3. A task can be archived and moved between columns, or statuses.
-4. The endpoint for tasks should only display tasks for those users who have authenticated and are authorized to view their tasks.
+## Usage
 
-## Ideal
+For development purposes, you can run the application using Nodemon to automatically restart the server when changes are detected. Execute the following command:
 
-- Typescript
-- Tests
-- Dockerized Application
+```
+npm run dev
+```
 
-## Extra credit
+This will start the server at `http://localhost:3000` by default. You can change the port in the `src/index.ts` file
 
-- Apollo Server GraphQL
-- Logging
+For production, you can build the TypeScript files and then start the server. Run the following commands:
+
+```
+npm run build
+npm start
+```
+
+## Project Structure
+
+The project structure is organized as follows:
+
+- `src`: Contains TypeScript source files
+  - `index.ts`: Configures and starts the Express application
+- `dist`: Output directory created during build for compiled TypeScript files
+- `package.json`: Project configuration and dependencies
+- `tsconfig.json`: TypeScript configuration
+
+## Project Use
+
+1- First you need to get a token => /api/auth/getToken
+
+2- With that token now you should be able to use the endpoint under /api/task
+
+## Test project
+
+npm run test
